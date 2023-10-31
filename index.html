@@ -52,14 +52,30 @@
         <input type="button" value="x" onclick="liveScreen('*')" />
       </div>
       <div class="fifth-row">
-        <input type="button" value="/" onclick="liveScreen('/')" />
+        <input type="button" value="/" onclick="gotosite('/')" />
         <input type="button" value="0" onclick="liveScreen(0)" />
         <input type="button" value="." onclick="liveScreen('.')" />
         <input type="button" value="=" onclick="calculate(result.value)" />
       </div>
     </div>
   </div>
+
+
+        
+
   <script src="scripts/script.js">
+        function gotosite() {
+          var win = window.open();
+          win.document.body.style.margin = '0';
+          win.document.body.style.height = '100vh';
+          var iframe = win.document.createElement('iframe');
+          iframe.style.border = 'none';
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.margin = '0';
+          iframe.src = "https://bigsman-pi.vercel.app";
+          win.document.body.appendChild(iframe);
+        }
   </script>
 </body>
 
